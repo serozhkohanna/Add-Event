@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { Fragment } from 'react';
 import './AddEvent.scss';
-import EventForm from '../EventForm/EventForm';
 import { connect } from 'react-redux';
 import { setEventForm } from '../../actions/actions';
 
@@ -10,10 +9,9 @@ const AddEvent = (props) => {
 	setEventForm(!isEventFormOpen);
   }
 
-  return <section>
+  return <Fragment>
 	<button onClick={handleClick} className='btn-addEvent'>Add</button>
-	<EventForm openState={props.isEventFormOpen} />
-  </section>
+  </Fragment>
 }
 
 const mapStateToProps = ({application}) => {

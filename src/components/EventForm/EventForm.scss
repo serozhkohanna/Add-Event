@@ -1,0 +1,16 @@
+.eventForm {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  left: 20%;
+  top: 30%;
+  padding: 50px;
+  background: pink;
+
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
