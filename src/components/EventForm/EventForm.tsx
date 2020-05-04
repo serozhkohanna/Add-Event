@@ -4,6 +4,7 @@ import './EventForm.scss';
 import { setEvent } from "../../actions/actions";
 import { EventDataInterface } from "../../constants/eventData.interface";
 import { BlockPicker } from 'react-color';
+import CloseBtn from "../CloseBtn/CloseBtn";
 
 import { CURRENT_DATE } from "../../constants/currentDate";
 
@@ -50,6 +51,8 @@ const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, 
 
   const renderEventForm = () => {
 	return <section className='eventForm'>
+	<div className="eventForm-wrapper">
+	  <CloseBtn/>
 	  <div className="form-input">
 		<label htmlFor="even-title">title</label>
 		<input required ref={(input) => eventTitleField = input} id='even-title' type="text"/>
@@ -66,13 +69,14 @@ const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, 
 		<label htmlFor="even-favourite">Favourite</label>
 		<input ref={(input) => eventFavField = input} id='even-favourite' type="checkbox"/>
 	  </div>
-	  <div className="form-favourites">
+	  <div className="form-input">
 		<label htmlFor="even-color">choose color</label>
 		<BlockPicker onChange={handleColorChange} color={markColor}/>
 	  </div>
 	  <button onClick={handleAddEventClick} className="btn-setEvent">
 		Add event
 	  </button>
+	</div>
 	</section>
   }
 

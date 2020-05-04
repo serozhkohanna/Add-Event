@@ -4,6 +4,7 @@ export interface EventDataInterface {
   eventDate: any;
   eventFav: boolean;
   eventUsers?: string[];
+  eventDateFrom?: string;
   eventColor: string;
   eventOutdated?: boolean;
 }
