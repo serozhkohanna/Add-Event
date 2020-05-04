@@ -8,7 +8,7 @@ const initialState: EventData = {
   events: []
 }
 
-export default function eventForm(state = initialState, action): object {
+export default function events(state = initialState, action): object {
   switch (action.type) {
 	case SET_EVENT:
 	  return {...state, events: [...state.events, action.payload]}

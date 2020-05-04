@@ -5,8 +5,8 @@ import { setEventForm } from '../../actions/actions';
 
 const AddEvent = (props) => {
   const handleClick = (): void => {
-	const {setEventForm, isEventFormOpen} = props;
-	setEventForm(!isEventFormOpen);
+	const {setEventForm} = props;
+	setEventForm(true);
   }
 
   return <Fragment>
@@ -21,7 +21,6 @@ const mapStateToProps = ({application}) => {
 }
 
 const mapDispatchToProps = {
-  //@ts-ignore
   setEventForm
 }
 

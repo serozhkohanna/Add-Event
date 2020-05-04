@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import './EventForm.scss';
-import { setEvent, setEventForm } from "../../actions/actions";
+import { setEvent } from "../../actions/actions";
 import { EventDataInterface } from "../../constants/eventData.interface";
 import { BlockPicker } from 'react-color';
+
+import { CURRENT_DATE } from "../../constants/currentDate";
 
 interface Props {
   isEventFormOpen: boolean;
@@ -12,9 +14,10 @@ interface Props {
   eventDateField: any;
   eventFavField: any;
   setEvent: any;
+  eventOutdated: any;
 }
 
-const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, eventDateField, eventFavField}: Props) => {
+const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, eventDateField, eventFavField, eventOutdated}: Props) => {
   const [markColor, setColor] = useState('#000');
 
   const handleColorChange = (color) => {
@@ -22,12 +25,17 @@ const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, 
   }
 
   const handleAddEventClick = () => {
+	console.log(CURRENT_DATE);
+
 	const data: EventDataInterface = {
 	  eventTitle: eventTitleField.value,
 	  eventDescription: eventDescField.value,
+	  // @ts-ignore
 	  eventDate: eventDateField.value,
 	  eventFav: eventFavField.value,
-	  eventColor: markColor
+	  eventColor: markColor,
+	  // @ts-ignore
+	  eventOutdated: CURRENT_DATE - Date.parse(new Date(eventDateField.value)) > 0
 	}
 
 	if (eventTitleField.value && eventDescField.value && eventDescField.value && eventDateField.value) {
