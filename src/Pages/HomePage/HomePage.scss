@@ -1,4 +1,15 @@
 .home-page {
   display: flex;
   justify-content: space-between;
+
+  &-addEvent {
+    flex-grow: 1;
+    background: url("img/home-bg.png") no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import './EventForm.scss';
-import { setEvent } from "../../actions/actions";
+import { setEvent, setEventForm } from "../../actions/actions";
 import { EventDataInterface } from "../../constants/eventData.interface";
 import { BlockPicker } from 'react-color';
 import CloseBtn from "../CloseBtn/CloseBtn";
@@ -15,10 +15,11 @@ interface Props {
   eventDateField: any;
   eventFavField: any;
   setEvent: any;
+  setEventForm: any;
   eventOutdated: any;
 }
 
-const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, eventDateField, eventFavField, eventOutdated}: Props) => {
+const EventForm = ({setEvent, setEventForm, isEventFormOpen, eventTitleField, eventDescField, eventDateField, eventFavField, eventOutdated}: Props) => {
   const [markColor, setColor] = useState('#000');
 
   const handleColorChange = (color) => {
@@ -26,12 +27,9 @@ const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, 
   }
 
   const handleAddEventClick = () => {
-	console.log(CURRENT_DATE);
-
 	const data: EventDataInterface = {
 	  eventTitle: eventTitleField.value,
 	  eventDescription: eventDescField.value,
-	  // @ts-ignore
 	  eventDate: eventDateField.value,
 	  eventFav: eventFavField.value,
 	  eventColor: markColor,
@@ -41,6 +39,7 @@ const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, 
 
 	if (eventTitleField.value && eventDescField.value && eventDescField.value && eventDateField.value) {
 	  setEvent(data);
+	  setEventForm(false);
 
 	  eventTitleField.value = '';
 	  eventDescField.value = '';
@@ -51,32 +50,32 @@ const EventForm = ({setEvent, isEventFormOpen, eventTitleField, eventDescField, 
 
   const renderEventForm = () => {
 	return <section className='eventForm'>
-	<div className="eventForm-wrapper">
-	  <CloseBtn/>
-	  <div className="form-input">
-		<label htmlFor="even-title">title</label>
-		<input required ref={(input) => eventTitleField = input} id='even-title' type="text"/>
+	  <div className="eventForm-wrapper">
+		<CloseBtn/>
+		<div className="form-input">
+		  <label htmlFor="even-title">title</label>
+		  <input required ref={(input) => eventTitleField = input} id='even-title' type="text"/>
+		</div>
+		<div className="form-input">
+		  <label htmlFor="even-desc">Description</label>
+		  <input ref={(input) => eventDescField = input} id='even-desc' type="text"/>
+		</div>
+		<div className="form-input">
+		  <label htmlFor="even-date">Date</label>
+		  <input ref={(input) => eventDateField = input} id='even-date' type="date"/>
+		</div>
+		<div className="form-favourites">
+		  <label htmlFor="even-favourite">Favourite</label>
+		  <input ref={(input) => eventFavField = input} id='even-favourite' type="checkbox"/>
+		</div>
+		<div className="form-input">
+		  <label htmlFor="even-color">choose color</label>
+		  <BlockPicker onChange={handleColorChange} color={markColor}/>
+		</div>
+		<button onClick={handleAddEventClick} className="btn-setEvent">
+		  Add event
+		</button>
 	  </div>
-	  <div className="form-input">
-		<label htmlFor="even-desc">Description</label>
-		<input ref={(input) => eventDescField = input} id='even-desc' type="text"/>
-	  </div>
-	  <div className="form-input">
-		<label htmlFor="even-date">Date</label>
-		<input ref={(input) => eventDateField = input} id='even-date' type="date"/>
-	  </div>
-	  <div className="form-favourites">
-		<label htmlFor="even-favourite">Favourite</label>
-		<input ref={(input) => eventFavField = input} id='even-favourite' type="checkbox"/>
-	  </div>
-	  <div className="form-input">
-		<label htmlFor="even-color">choose color</label>
-		<BlockPicker onChange={handleColorChange} color={markColor}/>
-	  </div>
-	  <button onClick={handleAddEventClick} className="btn-setEvent">
-		Add event
-	  </button>
-	</div>
 	</section>
   }
 
@@ -90,7 +89,8 @@ const mapStateToProps = ({application}) => {
 }
 
 const mapDispatchToProps = {
-  setEvent
+  setEvent,
+  setEventForm
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventForm);

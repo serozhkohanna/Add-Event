@@ -1,0 +1,77 @@
+@import "../../App";
+
+.event {
+  margin-bottom: 40px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba($gray, .10);
+  border-radius: 15px;
+  padding: 40px 20px 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 0 30px rgba($gray, .15);
+  }
+
+  .dot-wrapper {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  &-title {
+    text-transform: uppercase;
+    font-family: 'Montserrat Light';
+    max-width: 220px;
+    width: 100%;
+  }
+
+  &-from {
+    margin-right: 20px;
+    font-family: 'Montserrat Regular';
+    font-size: 12px;
+  }
+
+  .show-more {
+    margin-left: auto;
+    font-family: 'Montserrat Regular';
+    color: $gray-muted;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .event-config {
+    position: absolute;
+    display: flex;
+    right: 20px;
+    top: 10px;
+
+    button {
+      width: 25px;
+      height: 25px;
+      border-radius: 50px;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba($purple, .2);
+      }
+    }
+
+    &-edit {
+      margin-right: 5px;
+
+      &:after {
+        content: url("img/edit.svg");
+      }
+    }
+
+    &-remove {
+      &:after {
+        content: url("img/remove.svg");
+      }
+    }
+  }
+}

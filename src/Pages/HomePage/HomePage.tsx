@@ -3,14 +3,30 @@ import AddEvent from "../../components/AddEvent/AddEvent";
 import EventForm from "../../components/EventForm/EventForm";
 import EventLayout from "../../components/EventsLayout/EventsLayout";
 
+import { connect } from 'react-redux';
+
 import './HomePage.scss';
 
-const HomePage = () => {
+const HomePage = ({events}) => {
+  const currentEvent = events.filter(item => {
+	if (!item.eventOutdated) {
+	  return item;
+	}
+  })
+
   return <main className='home-page'>
-	<AddEvent/>
+	<div className="home-page-addEvent">
+	  <AddEvent/>
+	</div>
 	<EventForm/>
-	<EventLayout/>
+	<EventLayout currentEvent={currentEvent}/>
   </main>
 }
 
-export default HomePage;
+const mapStateToProps = ({events}) => {
+  return {
+	events: events.events
+  }
+}
+
+export default connect(mapStateToProps)(HomePage);

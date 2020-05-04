@@ -1,9 +1,15 @@
+@import "../../App";
+
 .breadcrumbs {
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 50px;
   display: flex;
   justify-content: flex-start;
+  font-family: 'Montserrat Regular';
+  letter-spacing: 1px;
+  color: $gray-muted;
+  font-size: 14px;
 
   &-item {
     padding-right: 30px;

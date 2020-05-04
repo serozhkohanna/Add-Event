@@ -9,9 +9,7 @@ const AddEvent = (props) => {
 	setEventForm(true);
   }
 
-  return <Fragment>
-	<button onClick={handleClick} className='btn-addEvent'>Add</button>
-  </Fragment>
+  return <button onClick={handleClick} className='btn-addEvent'>Add</button>
 }
 
 const mapStateToProps = ({application}) => {

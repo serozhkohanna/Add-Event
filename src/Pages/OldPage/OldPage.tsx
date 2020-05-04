@@ -1,9 +1,23 @@
 import React from 'react';
+import EventLayout from "../../components/EventsLayout/EventsLayout";
+import { connect } from 'react-redux';
 
-const OldPage = () => {
+const OldPage = ({events}) => {
+  const outdatedEvent = events.filter(item => {
+	if (item.eventOutdated) {
+	  return item;
+	}
+  })
+
   return <main>
-	old page
+	<EventLayout currentEvent={outdatedEvent}/>
   </main>
 }
 
-export default OldPage;
+const mapStateToProps = ({events}) => {
+  return {
+	events: events.events
+  }
+}
+
+export default connect(mapStateToProps)(OldPage);
