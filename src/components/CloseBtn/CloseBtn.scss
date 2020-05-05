@@ -1,5 +1,20 @@
-.btn-closeEvent {
+@import "../../App";
+
+.btn-closeForm {
   position: absolute;
-  top: -30px;
-  right: -30px;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+
+  &:hover{
+    background: rgba($purple, .1);
+    border-radius: 50%;
+  }
+
+  div{
+    background: url("img/cross.svg") no-repeat center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
 }

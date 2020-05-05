@@ -3,12 +3,19 @@ import './CloseBtn.scss';
 import { connect } from 'react-redux';
 import { setEventForm } from '../../actions/actions';
 
-const CloseBtn = ({setEventForm}) => {
+interface Props {
+  setEventForm: any;
+  styleClass: string
+}
+
+const CloseBtn = ({setEventForm, styleClass}: Props) => {
   const handleEventClose = () => {
 	setEventForm(false);
   }
 
-  return <button onClick={handleEventClose} className='btn-closeEvent'>close</button>
+  return <button className={styleClass} onClick={handleEventClose}>
+	<div></div>
+  </button>
 }
 
 const mapDispatchToProps = {

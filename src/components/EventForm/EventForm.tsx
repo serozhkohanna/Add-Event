@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './EventForm.scss';
 import { setEvent, setEventForm } from "../../actions/actions";
 import { EventDataInterface } from "../../constants/eventData.interface";
-import { BlockPicker } from 'react-color';
+import { TwitterPicker } from 'react-color';
 import CloseBtn from "../CloseBtn/CloseBtn";
 
 import { CURRENT_DATE } from "../../constants/currentDate";
@@ -21,9 +21,14 @@ interface Props {
 
 const EventForm = ({setEvent, setEventForm, isEventFormOpen, eventTitleField, eventDescField, eventDateField, eventFavField, eventOutdated}: Props) => {
   const [markColor, setColor] = useState('#000');
+  const [isPickerOpen, setColorPicker] = useState(false);
 
   const handleColorChange = (color) => {
 	setColor(color.hex);
+  }
+
+  const handlePickerClick = () => {
+	setColorPicker(!isPickerOpen);
   }
 
   const handleAddEventClick = () => {
@@ -51,30 +56,44 @@ const EventForm = ({setEvent, setEventForm, isEventFormOpen, eventTitleField, ev
   const renderEventForm = () => {
 	return <section className='eventForm'>
 	  <div className="eventForm-wrapper">
-		<CloseBtn/>
-		<div className="form-input">
-		  <label htmlFor="even-title">title</label>
-		  <input required ref={(input) => eventTitleField = input} id='even-title' type="text"/>
+		<CloseBtn styleClass={'btn-closeForm'}/>
+		<div className="main-title">
+		  <h2>Tell about your event</h2>
 		</div>
 		<div className="form-input">
-		  <label htmlFor="even-desc">Description</label>
-		  <input ref={(input) => eventDescField = input} id='even-desc' type="text"/>
+		  <input type="text" name="name" ref={(input) => eventTitleField = input} className="question" id="even-title"
+				 required autoComplete="off"/>
+		  <label htmlFor="even-title">
+			<span>Event title</span>
+		  </label>
 		</div>
 		<div className="form-input">
-		  <label htmlFor="even-date">Date</label>
-		  <input ref={(input) => eventDateField = input} id='even-date' type="date"/>
+		  <input type="text" name="name" ref={(input) => eventDescField = input} id='even-desc' className="question"
+				 required autoComplete="off"/>
+		  <label htmlFor="even-desc">
+			<span>Event description</span>
+		  </label>
+		</div>
+		<div className="input-group">
+		  <div className="form-input">
+			<label htmlFor="even-date">Date</label>
+			<input ref={(input) => eventDateField = input} id='even-date' className='date-form' type="date"/>
+		  </div>
+		  <div className="form-input-colorpicker">
+			<label htmlFor="even-color">Choose color</label>
+			<button className='btn-change-color' style={{'background': markColor}} onClick={handlePickerClick}></button>
+			{isPickerOpen && <TwitterPicker onChange={handleColorChange} color={markColor}/>}
+		  </div>
 		</div>
 		<div className="form-favourites">
+		  <input ref={(input) => eventFavField = input} className='btn-checkbox' id='even-favourite' type="checkbox"/>
 		  <label htmlFor="even-favourite">Favourite</label>
-		  <input ref={(input) => eventFavField = input} id='even-favourite' type="checkbox"/>
 		</div>
-		<div className="form-input">
-		  <label htmlFor="even-color">choose color</label>
-		  <BlockPicker onChange={handleColorChange} color={markColor}/>
+		<div className="add-event-wrapper">
+		  <button onClick={handleAddEventClick} className="btn-setEvent">
+			<div></div>
+		  </button>
 		</div>
-		<button onClick={handleAddEventClick} className="btn-setEvent">
-		  Add event
-		</button>
 	  </div>
 	</section>
   }
