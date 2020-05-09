@@ -5,12 +5,14 @@ import { setEventForm } from '../../actions/actions';
 
 interface Props {
   setEventForm: any;
-  styleClass: string
+  styleClass: string;
+  childResponse: any;
 }
 
-const CloseBtn = ({setEventForm, styleClass}: Props) => {
+const CloseBtn = ({setEventForm, styleClass, childResponse}: Props) => {
   const handleEventClose = () => {
 	setEventForm(false);
+	childResponse(false);
   }
 
   return <button className={styleClass} onClick={handleEventClose}>

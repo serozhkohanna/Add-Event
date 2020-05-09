@@ -1,4 +1,7 @@
 import React, { Fragment } from 'react';
+import RemoveEventBtn from "../RemoveEventBtn/RemoveEventBtn";
+import EditEventBtn from '../EditEventBtn/EditEventBtn';
+
 import './Event.scss';
 
 import { EventDataInterface } from '../../constants/eventData.interface';
@@ -20,13 +23,10 @@ const Event = ({eventsList}: any | EventDataInterface) => {
 		  {item.eventTitle}
 		</p>
 		<p className="event-from">{item.eventDateFrom}</p>
-		{/*<p>{item.eventDate}</p>*/}
-		{/*<p>{item.eventFav}</p>*/}
-		{/*<p>{item.eventColor}</p>*/}
 		<button className='show-more'>show more</button>
 		<div className="event-config">
-		  <button className='event-config-edit'></button>
-		  <button className='event-config-remove'></button>
+		  <EditEventBtn/>
+		  <RemoveEventBtn event={item}/>
 		</div>
 	  </div>
 	})}
