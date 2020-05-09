@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ec53db28ab2775ad0cad8e99eb87df9d",
+    "revision": "6cb6c5dc0614a0671872b71834e514b8",
     "url": "/addevent/index.html"
   },
   {
-    "revision": "f12103f05d1fee2a8d00",
+    "revision": "f4e3c81369138165ff49",
     "url": "/addevent/static/css/main.069589de.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/addevent/static/js/2.5c3e91e7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f12103f05d1fee2a8d00",
-    "url": "/addevent/static/js/main.40e07f27.chunk.js"
+    "revision": "f4e3c81369138165ff49",
+    "url": "/addevent/static/js/main.6252e5b4.chunk.js"
   },
   {
     "revision": "4156268d1037894b85d8",

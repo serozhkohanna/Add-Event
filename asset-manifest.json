@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/addevent/static/css/main.069589de.chunk.css",
-    "main.js": "/addevent/static/js/main.40e07f27.chunk.js",
-    "main.js.map": "/addevent/static/js/main.40e07f27.chunk.js.map",
+    "main.js": "/addevent/static/js/main.6252e5b4.chunk.js",
+    "main.js.map": "/addevent/static/js/main.6252e5b4.chunk.js.map",
     "runtime-main.js": "/addevent/static/js/runtime-main.95d2cf4c.js",
     "runtime-main.js.map": "/addevent/static/js/runtime-main.95d2cf4c.js.map",
     "static/js/2.5c3e91e7.chunk.js": "/addevent/static/js/2.5c3e91e7.chunk.js",
     "static/js/2.5c3e91e7.chunk.js.map": "/addevent/static/js/2.5c3e91e7.chunk.js.map",
     "index.html": "/addevent/index.html",
-    "precache-manifest.6660a1e9102207c65446003ce3d33a15.js": "/addevent/precache-manifest.6660a1e9102207c65446003ce3d33a15.js",
+    "precache-manifest.164b057e8366ed228196be3333e676ba.js": "/addevent/precache-manifest.164b057e8366ed228196be3333e676ba.js",
     "service-worker.js": "/addevent/service-worker.js",
     "static/css/main.069589de.chunk.css.map": "/addevent/static/css/main.069589de.chunk.css.map",
     "static/js/2.5c3e91e7.chunk.js.LICENSE.txt": "/addevent/static/js/2.5c3e91e7.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.95d2cf4c.js",
     "static/js/2.5c3e91e7.chunk.js",
     "static/css/main.069589de.chunk.css",
-    "static/js/main.40e07f27.chunk.js"
+    "static/js/main.6252e5b4.chunk.js"
   ]
 }
