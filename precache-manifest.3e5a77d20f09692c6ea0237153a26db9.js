@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6cb6c5dc0614a0671872b71834e514b8",
+    "revision": "3844cd075aeae04eb313552fefe09279",
     "url": "/addevent/index.html"
   },
   {
-    "revision": "f4e3c81369138165ff49",
-    "url": "/addevent/static/css/main.069589de.chunk.css"
+    "revision": "c8c860842866a9df12b3",
+    "url": "/addevent/static/css/main.a90cfe5e.chunk.css"
   },
   {
-    "revision": "88a495b0f54b84c47f1f",
-    "url": "/addevent/static/js/2.5c3e91e7.chunk.js"
+    "revision": "e63ec1410f81cc3aa7ae",
+    "url": "/addevent/static/js/2.0becacdd.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/addevent/static/js/2.5c3e91e7.chunk.js.LICENSE.txt"
+    "url": "/addevent/static/js/2.0becacdd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f4e3c81369138165ff49",
-    "url": "/addevent/static/js/main.6252e5b4.chunk.js"
+    "revision": "c8c860842866a9df12b3",
+    "url": "/addevent/static/js/main.5c61c54e.chunk.js"
   },
   {
     "revision": "4156268d1037894b85d8",
