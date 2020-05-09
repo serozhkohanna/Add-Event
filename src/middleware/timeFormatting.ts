@@ -12,7 +12,8 @@ export const timeFormatting = store => next => action => {
 	const eventFormatted = {
 	  ...payload,
 	  eventDate: eventDateFormatted,
-	  eventDateFrom
+	  eventDateFrom,
+	  id: Math.round(Math.random() * 100000)
 	}
 	const newAction = {...action, payload: eventFormatted};
 	next(newAction);

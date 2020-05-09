@@ -11,4 +11,3 @@ const Breadcrumbs = () => {
 }
 
 export default Breadcrumbs;
-export default Breadcrumbs;
