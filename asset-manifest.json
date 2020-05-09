@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/addevent/static/css/main.069589de.chunk.css",
+    "main.js": "/addevent/static/js/main.faf7fc8b.chunk.js",
+    "main.js.map": "/addevent/static/js/main.faf7fc8b.chunk.js.map",
+    "runtime-main.js": "/addevent/static/js/runtime-main.95d2cf4c.js",
+    "runtime-main.js.map": "/addevent/static/js/runtime-main.95d2cf4c.js.map",
+    "static/js/2.5c3e91e7.chunk.js": "/addevent/static/js/2.5c3e91e7.chunk.js",
+    "static/js/2.5c3e91e7.chunk.js.map": "/addevent/static/js/2.5c3e91e7.chunk.js.map",
+    "index.html": "/addevent/index.html",
+    "precache-manifest.32f44f8d311b993c6d8717548c31841d.js": "/addevent/precache-manifest.32f44f8d311b993c6d8717548c31841d.js",
+    "service-worker.js": "/addevent/service-worker.js",
+    "static/css/main.069589de.chunk.css.map": "/addevent/static/css/main.069589de.chunk.css.map",
+    "static/js/2.5c3e91e7.chunk.js.LICENSE.txt": "/addevent/static/js/2.5c3e91e7.chunk.js.LICENSE.txt",
+    "static/media/CloseBtn.scss": "/addevent/static/media/cross.fca303ef.svg",
+    "static/media/EventForm.scss": "/addevent/static/media/celebrate.1e78ffde.svg",
+    "static/media/Event.scss": "/addevent/static/media/remove.1d0e3fa1.svg",
+    "static/media/HomePage.scss": "/addevent/static/media/home-bg.70576a90.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95d2cf4c.js",
+    "static/js/2.5c3e91e7.chunk.js",
+    "static/css/main.069589de.chunk.css",
+    "static/js/main.faf7fc8b.chunk.js"
+  ]
+}
