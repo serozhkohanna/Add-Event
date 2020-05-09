@@ -7,12 +7,14 @@ import Header from './components/Header/Header';
 import HomePage from "./Pages/HomePage/HomePage";
 import OldPage from "./Pages/OldPage/OldPage";
 import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
+import EventForm from './components/EventForm/EventForm';
 
 function App() {
   return (
 	<div className="App">
 	  <Header/>
 	  <Breadcrumbs/>
+	  <EventForm/>
 	  <Switch>
 		<Route exact path='/' component={HomePage}/>
 		<Route exact path='/outdated' component={OldPage}/>
