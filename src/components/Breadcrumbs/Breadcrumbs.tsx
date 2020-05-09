@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 
 const Breadcrumbs = () => {
   return <section className={'breadcrumbs'}>
-	<Link to='/' className={'breadcrumbs-item'}>Home</Link>
+	<Link to='/addevent' className={'breadcrumbs-item'}>Home</Link>
 	<Link to='/outdated' className={'breadcrumbs-item'}>Old</Link>
   </section>
 }
 
+export default Breadcrumbs;
 export default Breadcrumbs;

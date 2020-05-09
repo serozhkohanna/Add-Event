@@ -16,7 +16,7 @@ function App() {
 	  <Breadcrumbs/>
 	  <EventForm/>
 	  <Switch>
-		<Route exact path='/' component={HomePage}/>
+		<Route exact path='/addevent' component={HomePage}/>
 		<Route exact path='/outdated' component={OldPage}/>
 	  </Switch>
 	</div>
