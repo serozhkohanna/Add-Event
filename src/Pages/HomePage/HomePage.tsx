@@ -1,6 +1,5 @@
 import React from 'react';
 import AddEvent from "../../components/AddEvent/AddEvent";
-import EventForm from "../../components/EventForm/EventForm";
 import EventLayout from "../../components/EventsLayout/EventsLayout";
 
 import { connect } from 'react-redux';
@@ -18,7 +17,6 @@ const HomePage = ({events}) => {
 	<div className="home-page-addEvent">
 	  <AddEvent/>
 	</div>
-	<EventForm/>
 	<EventLayout currentEvent={currentEvent}/>
   </main>
 }
