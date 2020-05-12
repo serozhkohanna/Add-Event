@@ -1,4 +1,4 @@
-import { SET_EVENT, REMOVE_EVENT } from "../constants/types";
+import { SET_EVENT, REMOVE_EVENT, EXPAND_EVENT } from "../constants/types";
 
 interface EventData {
   events: any;
@@ -17,6 +17,17 @@ export default function events(state = initialState, action): object {
 		...state,
 		events: state.events.filter(item => {
 		  return item.id !== action.payload.id
+		})
+	  }
+
+	case EXPAND_EVENT:
+	  return {
+		...state,
+		events: state.events.map(item => {
+		  if (item.id === action.payload.id) {
+			item.eventExpand = action.payload.eventExpand;
+			return item;
+		  } else return item;
 		})
 	  }
   }

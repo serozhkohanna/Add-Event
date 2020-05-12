@@ -17,7 +17,7 @@ function App() {
 	  <EventForm/>
 	  <Switch>
 		<Route exact path='/addevent' component={HomePage}/>
-		<Route exact path='/outdated' component={OldPage}/>
+		<Route exact path='/addevent/outdated' component={OldPage}/>
 	  </Switch>
 	</div>
   );
