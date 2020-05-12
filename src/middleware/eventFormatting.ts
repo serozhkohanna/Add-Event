@@ -1,4 +1,4 @@
-import { SET_EVENT, EXPAND_EVENT } from "../constants/types";
+import { SET_EVENT } from "../constants/types";
 // @ts-ignore
 import moment from 'moment';
 
@@ -16,14 +16,6 @@ export const eventFormatting = store => next => action => {
 	const newAction = {...action, payload: eventFormatted};
 	next(newAction);
   }
-  // else if (type === EXPAND_EVENT) {
-	// const eventFormatted = {
-	//   ...payload,
-	//   eventExpand: !payload.eventExpand,
-	// }
-	// const newAction = {...action, payload: eventFormatted};
-	// next(newAction);
-  // }
   else {
 	next(action);
   }
