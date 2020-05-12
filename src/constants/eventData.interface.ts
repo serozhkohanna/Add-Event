@@ -7,4 +7,6 @@ export interface EventDataInterface {
   eventDateFrom?: string;
   eventColor: string;
   eventOutdated?: boolean;
+  id?: number;
+  eventExpand?: boolean;
 }

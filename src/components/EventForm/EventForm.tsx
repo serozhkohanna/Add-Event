@@ -39,8 +39,9 @@ const EventForm = ({setEvent, setEventForm, isEventFormOpen, eventTitleField, ev
 	  eventTitle: eventTitleField.value,
 	  eventDescription: eventDescField.value,
 	  eventDate: eventDateField.value,
-	  eventFav: eventFavField.value,
+	  eventFav: eventFavField.checked,
 	  eventColor: markColor,
+	  eventExpand: false,
 	  // @ts-ignore
 	  eventOutdated: CURRENT_DATE - Date.parse(new Date(eventDateField.value)) > 0
 	}
@@ -91,7 +92,7 @@ const EventForm = ({setEvent, setEventForm, isEventFormOpen, eventTitleField, ev
 			<div className="form-input-colorpicker">
 			  <label htmlFor="even-color">Choose color</label>
 			  <button className='btn-change-color' style={{'background': markColor}}
-					  onClick={handlePickerClick}></button>
+					  onClick={handlePickerClick}/>
 			  {isPickerOpen && <TwitterPicker onChange={handleColorChange} color={markColor}/>}
 			</div>
 		  </div>

@@ -1,6 +1,11 @@
 import React, { Fragment } from 'react';
 import RemoveEventBtn from "../RemoveEventBtn/RemoveEventBtn";
 import EditEventBtn from '../EditEventBtn/EditEventBtn';
+import { connect } from 'react-redux';
+
+import { expandEvent } from '../../actions/actions';
+
+import Favourite from '../Favourite/Favourite';
 
 import './Event.scss';
 
@@ -8,9 +13,28 @@ import { EventDataInterface } from '../../constants/eventData.interface';
 
 interface Props {
   eventsList: object[];
+  expandEvent: any;
 }
 
-const Event = ({eventsList}: any | EventDataInterface) => {
+const Event = ({eventsList, expandEvent}: any | EventDataInterface) => {
+  const handleExpandClick = (item) => {
+	item.eventExpand = !item.eventExpand;
+	expandEvent(item);
+  }
+
+  const renderExpandSection = (item) => {
+	console.log(item)
+	return <div className="event-expand">
+	  <div className="expand-date">
+		<p>{item.eventDate}</p>
+	  </div>
+	  <div className="expand-desc">
+		<p>{item.eventDescription}</p>
+	  </div>
+	  {item.eventFav && <Favourite styleClass={'event-favourite'} />}
+	</div>
+  }
+
   return <Fragment>
 	{eventsList && eventsList.map((item, i) => {
 	  return <div key={i} className='event'>
@@ -23,7 +47,8 @@ const Event = ({eventsList}: any | EventDataInterface) => {
 		  {item.eventTitle}
 		</p>
 		<p className="event-from">{item.eventDateFrom}</p>
-		<button className='show-more'>show more</button>
+		<button onClick={() => handleExpandClick(item)} className='show-more'>show more</button>
+		{item.eventExpand && renderExpandSection(item)}
 		<div className="event-config">
 		  <EditEventBtn/>
 		  <RemoveEventBtn event={item}/>
@@ -33,4 +58,8 @@ const Event = ({eventsList}: any | EventDataInterface) => {
   </Fragment>
 }
 
-export default Event;
+const mapDispatchToProps = {
+  expandEvent
+}
+
+export default connect(null, mapDispatchToProps)(Event);
