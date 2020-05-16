@@ -1,0 +1,53 @@
+@import "../../App";
+
+.page-404 {
+  height: 100vh;
+  width: 100%;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: contain;
+  background: url("img/404.svg") no-repeat bottom;
+  background-size: 600px;
+  font-family: "Montserrat Bold", sans-serif;
+  color: $gray-muted;
+  letter-spacing: .5px;
+  position: relative;
+
+  &:before {
+    content: '404';
+    position: absolute;
+    top: 150px;
+    font-size: 370px;
+    text-shadow: 0 0 1px $purple;
+    color: white;
+    z-index: -1;
+    letter-spacing: 30px;
+    opacity: .7;
+  }
+
+  &-title {
+    margin-bottom: 30px;
+  }
+
+  &-button {
+    background: $purple;
+    font-family: "Montserrat Regular", sans-serif;
+    width: 120px;
+    border-radius: 3px;
+    height: 40px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
