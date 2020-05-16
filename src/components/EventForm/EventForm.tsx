@@ -7,7 +7,6 @@ import './EventForm.scss';
 import { setEvent, setEventForm } from "../../actions/actions";
 import CloseBtn from "../CloseBtn/CloseBtn";
 
-import { CURRENT_DATE } from "../../constants/currentDate";
 import { EventDataInterface } from "../../constants/eventData.interface";
 
 
@@ -42,8 +41,7 @@ const EventForm = ({setEvent, setEventForm, isEventFormOpen, eventTitleField, ev
 	  eventFav: eventFavField.checked,
 	  eventColor: markColor,
 	  eventExpand: false,
-	  // @ts-ignore
-	  eventOutdated: CURRENT_DATE - Date.parse(new Date(eventDateField.value)) > 0
+	  eventEdit: false,
 	}
 
 	if (eventTitleField.value && eventDescField.value && eventDescField.value && eventDateField.value) {

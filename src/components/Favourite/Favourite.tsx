@@ -3,7 +3,7 @@ import favIcon from './img/fav.svg';
 import './Favourite.scss';
 
 interface Props {
-  styleClass: string;
+  styleClass?: string;
 }
 
 const Favourite = ({styleClass}: Props) => {
