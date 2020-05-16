@@ -10,4 +10,5 @@ export interface EventDataInterface {
   id?: number;
   eventExpand?: boolean;
   eventEdit?: boolean;
+  eventMs?: number;
 }

@@ -1,6 +1,7 @@
 .home-page {
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   &-addEvent {
     flex-grow: 1;

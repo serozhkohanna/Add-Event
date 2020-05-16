@@ -14,7 +14,9 @@ export const eventFormatting = store => next => action => {
 	  eventDateFrom,
 	  id: Math.round(Math.random() * 100000),
 	  // @ts-ignore
-	  eventOutdated: CURRENT_DATE - Date.parse(new Date(payload.eventDate)) > 0
+	  eventOutdated: CURRENT_DATE - Date.parse(new Date(payload.eventDate)) > 0,
+	  // @ts-ignore
+	  eventMs: Date.parse(new Date(payload.eventDate))
 	}
 	const newAction = {...action, payload: eventFormatted};
 	next(newAction);
@@ -27,6 +29,9 @@ export const eventFormatting = store => next => action => {
 	  // @ts-ignore
 	  eventOutdated: CURRENT_DATE - Date.parse(new Date(payload.eventDate)) > 0,
 	  eventDateFrom,
+	  // @ts-ignore
+	  eventMs: Date.parse(new Date(payload.eventDate))
+
 	}
 	const newAction = {...action, payload: eventFormatted};
 	next(newAction);
