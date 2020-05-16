@@ -6,10 +6,11 @@
   left: 50px;
   display: flex;
   justify-content: flex-start;
-  font-family: 'Montserrat Regular';
+  font-family: 'Montserrat Regular', sans-serif;
   letter-spacing: 1px;
   color: $gray-muted;
   font-size: 14px;
+  z-index: 10;
 
   &-item {
     padding-right: 30px;

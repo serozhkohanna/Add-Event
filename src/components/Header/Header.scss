@@ -10,13 +10,14 @@ header {
   position: absolute;
   top: 0;
   box-shadow: 0 0 30px rgba($gray, .2);
+  z-index: 10;
 
   .title-wrapper {
     text-transform: uppercase;
 
     h1 {
       font-size: 14px;
-      font-family: 'Montserrat Light';
+      font-family: 'Montserrat Light', sans-serif;
       color: $gray;
       letter-spacing: 2px;
     }
