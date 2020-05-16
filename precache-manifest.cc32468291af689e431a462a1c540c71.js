@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb3d071184555e313653bc59a61c1fdd",
+    "revision": "b53334284602d8042258239253451449",
     "url": "/addevent/index.html"
   },
   {
-    "revision": "d97d1f596e27ee61214c",
-    "url": "/addevent/static/css/main.846c2270.chunk.css"
+    "revision": "8ff34bde867b872f568c",
+    "url": "/addevent/static/css/main.aa177fcb.chunk.css"
   },
   {
-    "revision": "946b8d15391f5a4c665f",
-    "url": "/addevent/static/js/2.a044d5c8.chunk.js"
+    "revision": "40ae184d52635ddd383c",
+    "url": "/addevent/static/js/2.cbaa7fa7.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/addevent/static/js/2.a044d5c8.chunk.js.LICENSE.txt"
+    "url": "/addevent/static/js/2.cbaa7fa7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d97d1f596e27ee61214c",
-    "url": "/addevent/static/js/main.4647a9a6.chunk.js"
+    "revision": "8ff34bde867b872f568c",
+    "url": "/addevent/static/js/main.1a8dc22d.chunk.js"
   },
   {
     "revision": "4156268d1037894b85d8",
@@ -70,5 +70,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1d0e3fa1a685335081cab043136516a5",
     "url": "/addevent/static/media/remove.1d0e3fa1.svg"
+  },
+  {
+    "revision": "ccba89e65c8bc9a0dd89662eddb3a770",
+    "url": "/addevent/static/media/sort-purple.ccba89e6.svg"
+  },
+  {
+    "revision": "a880e35f8a419fd16ddebf0cd1395042",
+    "url": "/addevent/static/media/sort.a880e35f.svg"
   }
 ]);

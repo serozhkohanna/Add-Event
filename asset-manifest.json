@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/addevent/static/css/main.846c2270.chunk.css",
-    "main.js": "/addevent/static/js/main.4647a9a6.chunk.js",
-    "main.js.map": "/addevent/static/js/main.4647a9a6.chunk.js.map",
+    "main.css": "/addevent/static/css/main.aa177fcb.chunk.css",
+    "main.js": "/addevent/static/js/main.1a8dc22d.chunk.js",
+    "main.js.map": "/addevent/static/js/main.1a8dc22d.chunk.js.map",
     "runtime-main.js": "/addevent/static/js/runtime-main.95d2cf4c.js",
     "runtime-main.js.map": "/addevent/static/js/runtime-main.95d2cf4c.js.map",
-    "static/js/2.a044d5c8.chunk.js": "/addevent/static/js/2.a044d5c8.chunk.js",
-    "static/js/2.a044d5c8.chunk.js.map": "/addevent/static/js/2.a044d5c8.chunk.js.map",
+    "static/js/2.cbaa7fa7.chunk.js": "/addevent/static/js/2.cbaa7fa7.chunk.js",
+    "static/js/2.cbaa7fa7.chunk.js.map": "/addevent/static/js/2.cbaa7fa7.chunk.js.map",
     "index.html": "/addevent/index.html",
-    "precache-manifest.95f610635d4ae8b98108d1211ec2201a.js": "/addevent/precache-manifest.95f610635d4ae8b98108d1211ec2201a.js",
+    "precache-manifest.cc32468291af689e431a462a1c540c71.js": "/addevent/precache-manifest.cc32468291af689e431a462a1c540c71.js",
     "service-worker.js": "/addevent/service-worker.js",
-    "static/css/main.846c2270.chunk.css.map": "/addevent/static/css/main.846c2270.chunk.css.map",
-    "static/js/2.a044d5c8.chunk.js.LICENSE.txt": "/addevent/static/js/2.a044d5c8.chunk.js.LICENSE.txt",
+    "static/css/main.aa177fcb.chunk.css.map": "/addevent/static/css/main.aa177fcb.chunk.css.map",
+    "static/js/2.cbaa7fa7.chunk.js.LICENSE.txt": "/addevent/static/js/2.cbaa7fa7.chunk.js.LICENSE.txt",
     "static/media/Page404.scss": "/addevent/static/media/404.4798f1aa.svg",
     "static/media/CloseBtn.scss": "/addevent/static/media/cross.fca303ef.svg",
     "static/media/EventForm.scss": "/addevent/static/media/celebrate.1e78ffde.svg",
     "static/media/Event.scss": "/addevent/static/media/remove.1d0e3fa1.svg",
     "static/media/fav.svg": "/addevent/static/media/fav.1d42aa7d.svg",
-    "static/media/HomePage.scss": "/addevent/static/media/home-bg.70576a90.png"
+    "static/media/HomePage.scss": "/addevent/static/media/home-bg.70576a90.png",
+    "static/media/EventSorting.scss": "/addevent/static/media/sort.a880e35f.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.95d2cf4c.js",
-    "static/js/2.a044d5c8.chunk.js",
-    "static/css/main.846c2270.chunk.css",
-    "static/js/main.4647a9a6.chunk.js"
+    "static/js/2.cbaa7fa7.chunk.js",
+    "static/css/main.aa177fcb.chunk.css",
+    "static/js/main.1a8dc22d.chunk.js"
   ]
 }
