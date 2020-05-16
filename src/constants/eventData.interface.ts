@@ -9,4 +9,5 @@ export interface EventDataInterface {
   eventOutdated?: boolean;
   id?: number;
   eventExpand?: boolean;
+  eventEdit?: boolean;
 }

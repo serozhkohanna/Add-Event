@@ -36,14 +36,14 @@
     input,
     span,
     label {
-      font-family: 'Montserrat Regular';
+      font-family: 'Montserrat Regular', sans-serif;
       padding: 5px;
       font-size: 12px;
     }
   }
 
   .main-title {
-    font-family: 'Montserrat Regular';
+    font-family: 'Montserrat Regular', sans-serif;
     position: relative;
     margin-bottom: 50px;
 
@@ -59,7 +59,7 @@
     display: flex;
 
     label {
-      font-family: 'Montserrat Regular';
+      font-family: 'Montserrat Regular', sans-serif;
       padding: 5px;
       font-size: 12px;
       color: $gray-muted;
@@ -105,7 +105,7 @@
     align-items: center;
 
     label {
-      font-family: 'Montserrat Regular';
+      font-family: 'Montserrat Regular', sans-serif;
       font-size: 12px;
       color: $gray;
     }

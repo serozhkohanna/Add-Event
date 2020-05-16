@@ -3,9 +3,10 @@ import RemoveEventBtn from "../RemoveEventBtn/RemoveEventBtn";
 import EditEventBtn from '../EditEventBtn/EditEventBtn';
 import { connect } from 'react-redux';
 
-import { expandEvent } from '../../actions/actions';
+import { expandEvent, setEditEvent } from '../../actions/actions';
 
 import Favourite from '../Favourite/Favourite';
+import EditEventForm from '../EditEventForm/EditEventForm';
 
 import './Event.scss';
 
@@ -14,16 +15,16 @@ import { EventDataInterface } from '../../constants/eventData.interface';
 interface Props {
   eventsList: object[];
   expandEvent: any;
+  setEditEvent: any;
 }
 
-const Event = ({eventsList, expandEvent}: any | EventDataInterface) => {
+const Event = ({eventsList, expandEvent, setEditEvent}: any | EventDataInterface) => {
   const handleExpandClick = (item) => {
 	item.eventExpand = !item.eventExpand;
 	expandEvent(item);
   }
 
   const renderExpandSection = (item) => {
-	console.log(item)
 	return <div className="event-expand">
 	  <div className="expand-date">
 		<p>{item.eventDate}</p>
@@ -31,8 +32,13 @@ const Event = ({eventsList, expandEvent}: any | EventDataInterface) => {
 	  <div className="expand-desc">
 		<p>{item.eventDescription}</p>
 	  </div>
-	  {item.eventFav && <Favourite styleClass={'event-favourite'} />}
+	  {item.eventFav && <Favourite styleClass={'event-favourite'}/>}
 	</div>
+  }
+
+  const handleEditResponse = (item) => {
+	item.eventEdit = !item.eventEdit;
+	setEditEvent(item);
   }
 
   return <Fragment>
@@ -50,16 +56,18 @@ const Event = ({eventsList, expandEvent}: any | EventDataInterface) => {
 		<button onClick={() => handleExpandClick(item)} className='show-more'>show more</button>
 		{item.eventExpand && renderExpandSection(item)}
 		<div className="event-config">
-		  <EditEventBtn/>
+		  <EditEventBtn setEdit={() => handleEditResponse(item)}/>
 		  <RemoveEventBtn event={item}/>
 		</div>
+		{item.eventEdit && <EditEventForm item={item}/>}
 	  </div>
 	})}
   </Fragment>
 }
 
 const mapDispatchToProps = {
-  expandEvent
+  expandEvent,
+  setEditEvent
 }
 
 export default connect(null, mapDispatchToProps)(Event);
