@@ -9,10 +9,11 @@
   flex-grow: 1;
   font-family: "Montserrat Regular", sans-serif;
   letter-spacing: 1px;
+  color: $gray;
 
   a,
   a:link {
-    color: black;
+    color: $gray;
     text-decoration: none;
     background-position-y: -0%;
     background-image: linear-gradient($white 50%, rgba($purple, .3) 50%);
