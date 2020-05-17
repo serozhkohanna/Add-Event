@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AddEvent from "../../components/AddEvent/AddEvent";
 import EventLayout from "../../components/EventsLayout/EventsLayout";
 import EventsSorting from "../../components/EventsSorting/EventsSorting";
+import EmptyContent from "../../components/EmptyContent/EmptyContent";
 
 import { connect } from 'react-redux';
 
@@ -24,12 +25,20 @@ const HomePage = ({events}) => {
 	return a.eventMs - b.eventMs;
   })
 
+  const renderContent = () => {
+	if (currentEvent.length === 0) {
+	  return <EmptyContent type={'planned'}/>
+	} else {
+	  return <EventLayout currentEvent={currentEvent}/>
+	}
+  }
+
   return <main className='home-page'>
 	<div className="home-page-addEvent">
 	  <AddEvent/>
 	</div>
-	<EventLayout currentEvent={currentEvent}/>
 	<EventsSorting setSort={handleSorting}/>
+	{renderContent()}
   </main>
 }
 
