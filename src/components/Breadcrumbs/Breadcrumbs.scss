@@ -2,8 +2,8 @@
 
 .breadcrumbs {
   position: absolute;
-  top: 120px;
-  left: 50px;
+  top: 100px;
+  left: 10px;
   display: flex;
   justify-content: flex-start;
   font-family: 'Montserrat Regular', sans-serif;
@@ -11,6 +11,10 @@
   color: $gray-muted;
   font-size: 14px;
   z-index: 10;
+  @media (min-width: $tablet) {
+    left: 50px;
+    top: 120px;
+  }
 
   &-item {
     padding-right: 30px;
