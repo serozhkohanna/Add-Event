@@ -53,6 +53,10 @@
     .date-form {
       border: 1px solid $gray-muted;
       border-radius: 5px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 140px;
+      height: 30px;
     }
   }
 
