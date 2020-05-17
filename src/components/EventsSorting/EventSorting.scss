@@ -2,12 +2,19 @@
 
 .events-sort, .events-sort-active {
   position: absolute;
-  top: 120px;
-  right: 0;
+  top: 100px;
+  right: 10px;
   color: $gray-muted;
   font-family: "Montserrat Regular", sans-serif;
   font-size: 14px;
   cursor: pointer;
+  @media (min-width: $tablet) {
+    right: 50px;
+    top: 120px;
+  }
+  @media (min-width: $desktop) {
+    right: 0;
+  }
 
   &:before {
     content: url("./img/sort.svg");

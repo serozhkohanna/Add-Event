@@ -55,4 +55,25 @@
       border-radius: 5px;
     }
   }
+
+  .form-close {
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: .5px;
+
+    a,
+    a:link {
+      cursor: pointer;
+      color: $gray;
+      text-decoration: none;
+      background-position-y: -0%;
+      background-image: linear-gradient($white 50%, rgba($purple, .3) 50%);
+      transition: background 500ms ease;
+      background-size: auto 175%;
+    }
+
+    a:hover {
+      background-position-y: 100%;
+    }
+  }
 }

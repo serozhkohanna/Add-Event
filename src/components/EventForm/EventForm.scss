@@ -16,10 +16,14 @@
   flex-direction: column;
   margin: auto;
   background: $white;
-  width: 400px;
+  width: 350px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba($gray, .2);
-  z-index: 5;
+  z-index: 10;
+
+  @media (min-width: $tablet) {
+    width: 400px;
+  }
 
   &-wrapper {
     position: relative;
@@ -46,12 +50,19 @@
     font-family: 'Montserrat Regular', sans-serif;
     position: relative;
     margin-bottom: 50px;
+    font-size: 22px;
+    @media (min-width: $tablet) {
+      font-size: 24px;
+    }
 
     &:after {
       content: url("img/celebrate.svg");
       position: absolute;
       top: 0;
-      right: 55px;
+      right: 0;
+      @media (min-width: $tablet) {
+        right: 55px;
+      }
     }
   }
 

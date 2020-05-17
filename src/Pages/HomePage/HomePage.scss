@@ -1,16 +1,32 @@
+@import "../../App";
+
 .home-page {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   position: relative;
 
+  @media (min-width: $laptop) {
+    flex-direction: row;
+  }
+
   &-addEvent {
     flex-grow: 1;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: contain;
     background: url("img/home-bg.png") no-repeat;
     background-position-x: center;
     background-position-y: bottom;
-    margin-bottom: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 350px;
+
+    @media (min-width: $laptop) {
+      height: auto;
+      align-items: center;
+      padding-top: 0;
+      margin-bottom: 70px;
+    }
   }
 }

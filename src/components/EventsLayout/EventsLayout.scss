@@ -1,7 +1,21 @@
+@import "../../App";
+
 .event-layout {
-  height: calc(100vh - 120px);
-  overflow: scroll;
+  height: auto;
   max-width: 520px;
   width: 100%;
-  padding: 60px 20px 40px;
+  padding: 30px 10px 20px;
+  order: -1;
+  margin: auto;
+
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: $laptop) {
+    order: 1;
+    height: calc(100vh - 120px);
+    padding: 60px 20px 40px;
+    overflow: scroll;
+  }
 }

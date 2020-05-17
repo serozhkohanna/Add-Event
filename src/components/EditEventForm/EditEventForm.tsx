@@ -3,7 +3,7 @@ import './EditEventForm.scss';
 import '../EventForm/EventForm.scss';
 import { connect } from 'react-redux';
 
-import { setNewEventData } from '../../actions/actions';
+import { setNewEventData, setEditEvent } from '../../actions/actions';
 
 interface Props {
   item: any;
@@ -12,9 +12,10 @@ interface Props {
   editDescField?: any;
   editFavField: any;
   setNewEventData: any;
+  setEditEvent: any;
 }
 
-const EditEventForm = ({item, setNewEventData}: Props, editTitleField, editFavField,
+const EditEventForm = ({item, setNewEventData, setEditEvent}: Props, editTitleField, editFavField,
 					   editDateField, editDescField,) => {
   const handleTitleChange = (e) => {
 	item.eventTitle = e.target.value;
@@ -34,6 +35,11 @@ const EditEventForm = ({item, setNewEventData}: Props, editTitleField, editFavFi
   const handleFavChange = (e) => {
 	item.eventFav = e.target.checked;
 	setNewEventData(item);
+  }
+
+  const handleEditFormClick = () => {
+	item.eventEdit = false;
+	setEditEvent(item);
   }
 
   return <section className='event-edit-form'>
@@ -66,11 +72,15 @@ const EditEventForm = ({item, setNewEventData}: Props, editTitleField, editFavFi
 			 id='even-favourite' type="checkbox"/>
 	  <label htmlFor="even-favourite">Favourite</label>
 	</div>
+	<div className="form-close">
+	  <a onClick={handleEditFormClick}>close</a>
+	</div>
   </section>
 }
 
 const mapDispatchToProps = {
-  setNewEventData
+  setNewEventData,
+  setEditEvent
 }
 
 export default connect(null, mapDispatchToProps)(EditEventForm);
