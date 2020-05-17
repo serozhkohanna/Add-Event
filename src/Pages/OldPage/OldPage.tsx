@@ -1,5 +1,7 @@
 import React from 'react';
 import EventLayout from "../../components/EventsLayout/EventsLayout";
+import EmptyContent from "../../components/EmptyContent/EmptyContent";
+
 import { connect } from 'react-redux';
 
 const OldPage = ({events}) => {
@@ -9,8 +11,16 @@ const OldPage = ({events}) => {
 	}
   })
 
+  const renderContent = () => {
+	if (outdatedEvent.length === 0) {
+	  return <EmptyContent type={'outdated'}/>
+	} else {
+	  return <EventLayout currentEvent={outdatedEvent}/>
+	}
+  }
+
   return <main>
-	<EventLayout currentEvent={outdatedEvent}/>
+	{renderContent()}
   </main>
 }
 
