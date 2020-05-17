@@ -27,6 +27,7 @@ const EventForm = ({setEvent, setEventForm, isEventFormOpen, eventTitleField, ev
 
   const handleColorChange = (color) => {
 	setColor(color.hex);
+	setColorPicker(false);
   }
 
   const handlePickerClick = () => {
